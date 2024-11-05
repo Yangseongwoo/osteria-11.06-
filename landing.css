@@ -1,0 +1,693 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Katibeh&family=Noto+Sans+KR:wght@100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Katibeh&family=Literata:ital,opsz,wght@0,7..72,200..900;1,7..72,200..900&family=Noto+Sans+KR:wght@100..900&display=swap');
+
+
+::-webkit-scrollbar{
+    display: none;
+}
+
+
+/* Scroll to top button styles */
+#scrollToTopBtn {
+    width: 60px;
+    height: 60px;
+    display: none; /* Initially hidden */
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    z-index: 99;
+    font-size: 18px;
+    border: none;
+    outline: none;
+    background-color: #555;
+    color: white;
+    cursor: pointer;
+    padding: 15px;
+    border-radius: 50%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.3s, transform 0.3s, opacity 0.3s;
+    opacity: 0;
+}
+
+#scrollToTopBtn.show {
+    display: block;
+    opacity: 1;
+}
+
+#scrollToTopBtn:hover {
+    background-color: #D98697;
+    transform: scale(1.1);
+}
+
+#scrollToTopBtn:hover i{
+    color: #ffffff;
+}
+
+.cursor {
+    width: 30px;
+    height: 30px;
+    border: 1px solid white;
+    border-radius: 50%;
+    position: absolute;
+    transition-duration: 200ms;
+    transition-timing-function: ease-out;
+    animation: cursorAnim .5s infinite alternate;
+    pointer-events: none;
+    z-index: 100;
+}
+
+.cursor::after {
+    content: "";
+    width: 30px;
+    height: 30px;
+    position: absolute;
+    border: 8px solid gray;
+    border-radius: 50%;
+    opacity: .5;
+    top: -8px;
+    left: -8px;
+    animation: cursorAnim2 .5s infinite alternate;
+}
+
+
+
+*{  margin: 0;
+    padding: 0;
+}
+
+body{
+    width: 100%;
+    height: 100%;
+    background-color: #FCF9F1;
+    font-family: "Noto Sans KR", sans-serif;
+}
+
+.mainwrap{
+    width: 100%;
+    height: 1080px;
+    position: relative;
+}
+
+.logopng{
+    width: 150px;
+}
+
+nav {
+    width: 100%;
+    overflow: hidden;
+    z-index: 2;
+    position: absolute;
+    margin-top: 25px;
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 80px;
+}
+
+nav ul li {
+    float: left;
+}
+
+nav ul li a {
+    display: block;
+    color: rgb(255, 255, 255);
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+nav ul li a:hover {
+    color: #468d57;
+}
+
+nav ul li a img {
+    vertical-align: middle;
+}
+
+
+
+.slideshow, .slide {
+    width: 100%;
+    height: 1080px;
+    position: absolute;
+}
+
+.slide {
+    background-size: cover;
+    background-position: center;
+    opacity: 0;
+    z-index: -1;
+    animation: slideShow 9s infinite;
+}
+
+.slide1 {
+    background-image: url('images/main1.jpg'); /* 실제 이미지 경로로 변경 */
+}
+
+.slide2 {
+    background-image: url('images/main2.png'); /* 실제 이미지 경로로 변경 */
+    animation-delay: 3s; /* 전체 애니메이션 시간의 1/3 */
+}
+
+.slide3 {
+    background-image: url('images/main3.jpg'); /* 실제 이미지 경로로 변경 */
+    animation-delay: 6s; /* 전체 애니메이션 시간의 2/3 */
+}
+
+@keyframes slideShow {
+    0% {
+        opacity: 0;
+    }
+    5% {
+        opacity: 1;
+    }
+    33.33% {
+        opacity: 1;
+    }
+    38.33% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+
+
+.main{
+    color: white;
+    width: 100%;
+    text-align: center;
+    margin-top: 350px;
+}
+
+.mainttx{
+    font-family: "Katibeh", serif;
+    font-size: 90px;
+    font-weight: 300;
+}
+
+.mainttx2{
+    font-size: 30px;
+    font-weight: 600;
+    margin-top: 10px;
+}
+
+.mainttx3{
+    font-size: 24px;
+    font-weight: 200;
+}
+
+.about_container{
+    width: 100%;
+    height: auto;
+}
+
+.about{
+    margin-top: 13%;
+    margin-left: 14%;
+}
+
+.pattern1{
+    position: absolute;
+    left: 50%;
+}
+
+.abouttx{
+    font-family: "Katibeh", serif;
+    color: #D98697;
+    font-size: 62px;
+    font-weight: 400;
+}
+
+.abouttx2{
+    margin-top: 10px;
+    font-weight: bold;
+    font-size: 64px;
+}
+
+.abouttx3{
+    margin-top: 15px;
+    font-weight: 300;
+}
+
+
+.button i{
+    margin-right: 10px;
+}
+
+.button2 i{
+    margin-right: 10px;
+}
+
+.button3 i{
+    margin-right: 10px;
+}
+
+.button{
+    cursor: pointer;
+    color: #2d4733;
+    position: relative;
+    z-index: 10;
+    margin-left: -32px;
+}
+
+.button2{
+    cursor: pointer;
+    color: #2d4733;
+    position: relative;
+    z-index: 10;
+}
+
+.button3{
+    cursor: pointer;
+    color: #2d4733;
+    position: relative;
+    z-index: 10;
+    margin-left: -20px;
+}
+
+.disbtn{
+    font-family: "Literata", serif;
+    width: 300px;
+    border-style: none;
+    background-color: #FCF9F1;
+    font-size: 24px;
+    margin-top: 100px;
+    text-decoration: none;
+    color: black;
+}
+
+.dis{
+    width: 67px;
+    position: absolute;
+    margin-left: -30px;
+    margin-top: -19px;
+}
+
+.disbtn:hover a{
+    cursor: pointer;
+    color: #4b7454;
+}
+
+
+.disbtn:hover i{
+    cursor: pointer;
+    color: #4b7454;
+}
+
+.disbtn:hover .dis{
+    transition: 0.5s;
+    cursor: pointer;
+    opacity: 0;
+}
+
+.aboutimg{
+    margin-top: -150px;
+    margin-left: 17%;
+    z-index: 50;
+}
+.aboutimg img{
+    width: 450px;
+    margin-left: 25px;
+}
+
+.ab2{
+    margin-bottom: 30px;
+}
+
+.ab3{
+    margin-bottom: 100px;
+}
+
+.chef_container{
+    width: 100%;
+    height:  1400px;
+    display: flex;
+    position: relative;
+    margin: 0 auto;
+    margin-top: 200px;
+    margin-left: -50px;
+}
+
+.chef img{
+    width: 490px;
+}
+
+.chef{
+    display: flex;
+    margin-top: 300px;
+    margin-left: 130px;
+}
+
+
+.chef1{
+    font-family: "Katibeh", serif;
+    color: #D98697;
+    font-size: 62px;
+    font-weight: 400;
+}
+
+.chef2{
+    margin-top: 10px;
+    font-weight: bold;
+    font-size: 64px;
+}
+
+.chef3{
+    margin-top: 15px;
+    font-weight: 300;
+}
+
+.chefttx{
+    width: 500px;
+    z-index: 3;
+    margin-left: 63%;
+}
+
+.chefimg{
+    position: absolute;
+    margin-left: 5%;
+    z-index: 1;
+    /* box-shadow: -20px 20px 0px 3px #d98697; */
+}
+
+.chefimg2{
+    position: absolute;
+    z-index: 2;
+    left: 36%;
+    top: 16%;
+    /* box-shadow: 20px -20px 0px 3px #d98697; */
+}
+
+.chefttx{
+    margin-top: 22%;
+}
+
+
+
+
+.menu1{
+    font-family: "Katibeh", serif;
+    color: #D98697;
+    font-size: 62px;
+    font-weight: 400;
+}
+
+.menu2{
+    margin-top: 10px;
+    font-weight: bold;
+    font-size: 64px;
+}
+
+.menu3{
+    margin-top: 15px;
+    font-weight: 300;
+}
+
+.menu_container{
+    width: 100%;
+    display: flex; /* Flexbox 레이아웃 사용 */
+    justify-content: center; /* 가로 방향으로 가운데 정렬 */
+    align-items: center; 
+}
+
+.menu{
+    text-align: center; /* 텍스트 가운데 정렬 */
+}
+
+.menuimg{
+    display: flex;
+    justify-content: center; /* 가로 중앙 정렬 */
+    align-items: center;
+    gap: 35px;
+    margin-top: 200px;
+}
+
+.mimg{
+    width: 500px;
+    transition: opacity 0.5s ease; 
+}
+
+.mimg:first-child{
+    margin-left: 0px;
+}
+
+.img_con{
+    position: relative;
+    width: 500px;
+    height: auto;
+    display: inline-block; /* 이미지 크기에 맞게 컨테이너 크기 자동 조정 */
+    overflow: hidden;
+}
+
+.img-text{
+    font-family: "Katibeh", serif;
+    font-weight: 300;
+    position: absolute;
+    top: 85%;
+    left: 40%;
+    color: white;
+    font-size: 40px;
+}
+
+.img-text2{
+    font-family: "Katibeh", serif;
+    font-weight: 300;
+    position: absolute;
+    top: 85%;
+    left: 30%;
+    color: white;
+    font-size: 40px;
+}
+
+.img-text3{
+    font-family: "Katibeh", serif;
+    font-weight: 300;
+    position: absolute;
+    top: 85%;
+    left: 30%;
+    color: white;
+    font-size: 40px;
+}
+
+
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.781); /* 검은색 반투명 배경 */
+    opacity: 0; /* 기본적으로 숨김 */
+    transition: opacity 0.5s ease; /* 서서히 나타나는 효과 */
+    display: flex;
+    justify-content: center;
+    align-items: center; /* 중앙에 text 위치 */
+}
+
+.text {
+    color: white;
+    font-size: 20px;
+    opacity: 0; /* 기본적으로 숨김 */
+    transition: opacity 0.5s ease; /* 서서히 나타나는 효과 */
+}
+
+.text h2{
+    font-size: 26px;
+    font-weight: 500;
+}
+
+.img_con:hover .img-text{
+    opacity: 0;
+}
+
+.img_con:hover .img-text2{
+    opacity: 0;
+}
+
+.img_con:hover .img-text3{
+    opacity: 0;
+}
+
+.img_con:hover .overlay, .img_con:hover .text {
+    opacity: 1; /* hover 시 나타남 */
+}
+
+.img_con:hover .mimg {
+    opacity: 0.3; /* 이미지를 조금 흐리게 */
+}
+
+.reservation_container{
+    display: flex;
+    margin-top: 400px;
+}
+
+.reservation{
+    position: relative;
+}
+
+.resimg2{
+    position: absolute;
+    z-index: 5;
+    margin-left: -250px;
+    margin-top: 60px
+}
+
+.resimg{
+    margin-top: -80px;
+    z-index: 4;
+}
+
+
+
+
+
+.resttx{
+    margin-left: 34%;
+    margin-top: 60px;
+}
+
+
+.res1{
+    font-family: "Katibeh", serif;
+    color: #D98697;
+    font-size: 62px;
+    font-weight: 400;
+}
+
+.res2{
+    margin-top: 10px;
+    font-weight: bold;
+    font-size: 64px;
+}
+
+.res3{
+    margin-top: 15px;
+    font-weight: 300;
+}
+
+.pattern2{
+    margin-top: -120px;
+    position: absolute;
+    margin-left: 20%;
+    z-index: -1;
+}
+
+.footer_container{
+    width: 100%;
+    height: 600px;
+    display: flex;
+    flex-direction: column;
+    background-color: #D98697;
+    margin-top: 420px;
+}
+
+.footer_up{
+    width: 100%;
+    height: auto;  
+    display: flex;
+    
+}
+
+.footer_wrap{
+    width: 600px;
+    display: flex;
+    justify-content: space-between;
+    margin-left: 160px;
+    margin-top: 160px;
+}
+
+.footerttx{
+    font-family: "Katibeh", serif;
+    font-weight: 300;
+    font-size: 36px;
+    color: white;
+}
+
+.footerttx2{
+    font-size: 17px;
+    color: white;
+    font-weight: 300;
+    line-height: 35px;
+}
+
+
+.footer_wrap2{
+    width: 740px;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 160px;
+    margin-left: 110px;
+}
+
+.footerttx{
+    font-family: "Katibeh", serif;
+    font-weight: 300;
+    font-size: 36px;
+    color: white;
+}
+
+.footerttx2{
+    font-size: 17px;
+    color: white;
+    font-weight: 300;
+    margin-top: 20px;
+}
+
+.footer_separator{
+    width: 1px;
+    height: 250px; /* 선의 높이 조절 */
+    background-color: #ffffff; /* 선의 색상, 여기서는 검은색으로 설정 */
+    margin-top: 100px;
+    margin-left: 170px;
+}
+
+.footer_down{
+    width: 100%;
+    display: grid; /* 그리드 레이아웃 사용 */
+    place-items: center; /* 수평 및 수직 중앙 정렬 */
+    height: 100%;
+    margin-top: 100px;
+}
+
+.line2{
+    width: 100%;
+    height: 1px;
+    background-color: white;
+    margin-top: 50px;
+}
+
+.footerimg{
+    z-index: 3;
+    position: absolute;
+    background-color: #D98697;
+}
+
+.backimg{
+    position: absolute;
+    z-index: 2;
+    width: 200px;
+    height: 40px;
+    background-color: #D98697;
+}
+
+.footerdownttx{
+    width: 1500px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.right{
+    font-weight: 300;
+    font-size: 17px;
+    color: white;
+}

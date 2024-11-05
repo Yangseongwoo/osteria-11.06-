@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="about.css">
+    <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+</head>
+<body>
+
+    <button id="scrollToTopBtn" title="Go to top"><i class="fa-solid fa-arrow-up"></i></button>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            var scrollToTopBtn = document.getElementById('scrollToTopBtn');
+      
+            // Show the button with fade in effect when scrolled down 2000px from the top
+            window.onscroll = function() {
+                if (document.body.scrollTop > 1000 || document.documentElement.scrollTop > 1000) {
+                    scrollToTopBtn.classList.add('show');
+                } else {
+                    scrollToTopBtn.classList.remove('show');
+                }
+            };
+      
+            // Scroll to the top of the document when the button is clicked
+            scrollToTopBtn.addEventListener('click', function() {
+                window.scrollTo({
+                    top: 0,
+                    behavior: 'smooth'
+                });
+            });
+        });
+        </script>
+
+    <div class="nav_container">
+        <nav>
+            <ul>
+                <li><a href="shop.html">SHOP</a></li>
+                <li><a href="#menu">MENU</a></li>
+                <li><a href="#reservation">RESERVATION</a></li>
+                <li><a href="#about">ABOUT</a></li>
+                <li><a href="landing.html"><img class="logopng" src="images/logo black.png" alt="구찌오스테리아 로고"></a></li>
+                <li><a href="#event">YOUR EVENT</a></li>
+                <li><a href="#chef">CHEF</a></li>
+                <li><a href="#news">NEWS</a></li>
+                <li><a href="#contact">CONTACT</a></li>
+            </ul>
+        </nav>
+    </div>
+
+    <img class="pattern1" src="images/pattern1.png" alt="">
+
+    <div class="container">
+        <div class="container_wrap">
+            <div  class="ambassador_wrap">
+                <img data-aos="fade-right"
+                data-aos-offset="300"
+                data-aos-delay="500"
+                data-aos-easing="ease-in-sine" class="amimg" src="images/ambass1.png" alt="">
+                <div class="ambassttx">
+                <h2 data-aos="fade-up"
+                data-aos-duration="1500" class="ammbass">An Italian ambassador in Korea</h2>
+                <h2 data-aos="fade-up"
+                data-aos-duration="1500" class="ammbass1">한국의 이탈리아 <br>
+                    앰버서더</h2>
+                    <h1 data-aos="fade-up"
+                    data-aos-duration="1500" class="ammbass2">서울에서 선보이는 이탈리아의 정신. <br>
+                        구찌 오스테리아 서울을 만나보세요. <br>
+                        세계적인 셰프 마시모 보투라(Massimo Bottura)가 <br> 
+                        한국의 정취를 담아 새롭게 선보이는 미식의 세계로 여러분을 초대합니다.</h1>
+                    </div>
+            </div>
+
+            <div class="mainrest_wrap">
+                <div class="restttx">
+                <h2 data-aos="fade-up"
+                data-aos-duration="1500" class="mainrest">Main restaurant</h2>
+                <h2 data-aos="fade-up"
+                data-aos-duration="1500" class="mainrest1">01.메인 레스토랑</h2>
+                    <h1 data-aos="fade-up"
+                    data-aos-duration="1500" class="mainrest2">구찌 오스테리아 피렌체에서 영감을 받은 <br>
+                        구찌 오스테리아 서울의 인테리어는 <br>
+                        이탈리아 르네상스의 시대적 요소와 구찌의 미학이 만나 다채로운 조화를 이룹니다.</h1>
+                    </div>
+                        <img data-aos="fade-left"
+                        data-aos-offset="300"
+                        data-aos-delay="500"
+                        data-aos-easing="ease-in-sine"  class="restimg" src="images/mainrest1.png" alt="">
+            </div>
+
+            <div class="gallery_wrap">
+                <h2 class="galltitle">Our Gallery</h2>
+                <div class="img_con">
+                <div class="img_wrap">
+                    <div data-aos="fade-right" data-aos-delay="100" class="item"><img src="images/gallery.png" alt=""></div>
+                    <div data-aos="fade-left" data-aos-delay="100" class="item"><img src="images/gallery2.png" alt=""></div>
+                </div>
+
+                <div class="img_wrap2">
+                    <div data-aos="fade-up-right" data-aos-delay="100" class="item2"><img src="images/gallery3.png" alt=""></div>
+                    <div data-aos="fade-up" data-aos-delay="100" class="item2"><img src="images/gallery4.png" alt=""></div>
+                    <div data-aos="fade-up-left" data-aos-delay="100" class="item2"><img src="images/gallery5.png" alt=""></div>
+                </div>
+            </div>
+            </div>
+
+            <!-- Modal Structure -->
+<div id="imageModal" class="modal">
+    <span class="close">&times;</span>
+    <img class="modal-content" id="modalImage">
+    <div class="modal-nav">
+        <span class="prev">&#10094;</span>
+        <span class="next">&#10095;</span>
+    </div>
+</div>
+<script>
+    const modal = document.getElementById("imageModal");
+    const modalImg = document.getElementById("modalImage");
+    const closeBtn = document.querySelector(".close");
+    const prevBtn = document.querySelector(".prev");
+    const nextBtn = document.querySelector(".next");
+    let images = document.querySelectorAll(".item img, .item2 img");
+    let currentIndex;
+
+    images.forEach((img, index) => {
+        img.addEventListener("click", () => {
+            modal.style.display = "block";
+            modalImg.src = img.src;
+            currentIndex = index;
+        });
+    });
+
+    closeBtn.addEventListener("click", () => {
+        modal.style.display = "none";
+    });
+
+    prevBtn.addEventListener("click", () => {
+        currentIndex = (currentIndex === 0) ? images.length - 1 : currentIndex - 1;
+        modalImg.src = images[currentIndex].src;
+    });
+
+    nextBtn.addEventListener("click", () => {
+        currentIndex = (currentIndex === images.length - 1) ? 0 : currentIndex + 1;
+        modalImg.src = images[currentIndex].src;
+    });
+
+    window.addEventListener("click", (e) => {
+        if (e.target == modal) {
+            modal.style.display = "none";
+        }
+    });
+</script>
+
+
+            <img class="pattern2" src="images/pattern2.png" alt="">
+
+            <div class="footer_container">
+                <div class="footer_up">
+                <div class="footer_wrap">
+                <div class="footer">
+                    <h2 class="footerttx">Gucci Osteria</h2>
+                    <h1 class="footerttx2">Gucci Gaok, 6F, <br>
+                        223, Itaewon-Ro, <br>
+                        Yongsan-Gu, <br>Seoul</h1>
+                </div>
+        
+                <div class="footer">
+                    <h2 class="footerttx">Conact</h2>
+                    <h1 class="footerttx2">T. 02-795-1119<br>
+                        M. gucciosteria.kr@gucci.com</h1>
+                </div>
+            </div>
+        
+            <div class="footer_separator"></div>
+        
+            <div class="footer_wrap2">
+                <div class="footer">
+                    <h2 class="footerttx">Places</h2>
+                    <h1 class="footerttx2">Florence – Italy <br>
+                        Beverly Hills – USA <br>
+                        Tokyo – Japan <br>
+                        Seoul - South Korea</h1>
+                </div>
+        
+                <div class="footer">
+                    <h2 class="footerttx">Follow us</h2>
+                    <h1 class="footerttx2">Instagram <br>
+                        Facebook</h1>
+                </div>
+        
+                <div class="footer">
+                    <h2 class="footerttx">Languages</h2>
+                    <h1 class="footerttx2">Korean<br>
+                        English</h1>
+                </div>
+            </div>
+        </div>
+        <div class="footer_down">
+            <div class="line2"></div>
+            <img class="footerimg" src="images/pine-cone.png" alt="">
+            <div class="backimg"></div>
+            <div class="footerdownttx">
+                <h1 class="right">© Gucci Osteria 2023 . All rights reserved.</h1>
+                <h1 class="right">Terms . Accessibility . Privacy & Cookies</h1>
+            </div>
+        </div>
+            </div>
+            </div>
+        </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
+</body>
+</html>

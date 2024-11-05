@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="landing.css">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+</head>
+<body>
+
+    <button id="scrollToTopBtn" title="Go to top"><i class="fa-solid fa-arrow-up"></i></button>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            var scrollToTopBtn = document.getElementById('scrollToTopBtn');
+      
+            // Show the button with fade in effect when scrolled down 2000px from the top
+            window.onscroll = function() {
+                if (document.body.scrollTop > 1000 || document.documentElement.scrollTop > 1000) {
+                    scrollToTopBtn.classList.add('show');
+                } else {
+                    scrollToTopBtn.classList.remove('show');
+                }
+            };
+      
+            // Scroll to the top of the document when the button is clicked
+            scrollToTopBtn.addEventListener('click', function() {
+                window.scrollTo({
+                    top: 0,
+                    behavior: 'smooth'
+                });
+            });
+        });
+        </script>
+
+    <div class="contianer">
+        <div class="mainwrap">
+    <div class="slideshow">
+        <div class="slide slide1"></div>
+        <div class="slide slide2"></div>
+        <div class="slide slide3"></div>
+        <div class="main">
+            <h2 class="mainttx">Gucci Osteria Seoul</h2>
+            <h2 class="mainttx2">구찌 오스테리아 서울에 오신 것을 환영합니다</h2>
+            <h2 class="mainttx3">서울에서 선보이는 이탈리아의 정신. 구찌 오스테리아 서울을 만나보세요.</h2>
+        </div>
+    </div>
+
+    <nav>
+        <ul>
+            <li><a href="shop.html">SHOP</a></li>
+            <li><a href="#menu">MENU</a></li>
+            <li><a href="#reservation">RESERVATION</a></li>
+            <li><a href="about.html">ABOUT</a></li>
+            <li><a href="#home"><img class="logopng" src="images/logo.png" alt="구찌오스테리아 로고"></a></li>
+            <li><a href="#event">YOUR EVENT</a></li>
+            <li><a href="#chef">CHEF</a></li>
+            <li><a href="#news">NEWS</a></li>
+            <li><a href="#contact">CONTACT</a></li>
+        </ul>
+    </nav>
+</div>
+
+<img class="pattern1" src="images/pattern1.png" alt="">
+    <div class="about_container">
+        <div class="about">
+    <h2 data-aos="fade-up"
+    data-aos-duration="1500" class="abouttx">About</h2>
+    <h2 data-aos="fade-up"
+    data-aos-duration="1500" class="abouttx2">구찌 오스테리아</h2>
+    <h2 data-aos="fade-up"
+    data-aos-duration="1500" class="abouttx3">구찌 오스테리아 서울에서  <br>
+        모던 이탈리안 미식의 여정을 만나보세요</h2>
+        <div data-aos="fade-up"
+        data-aos-duration="1500"   class="button">
+            <button class="disbtn"><img class="dis" src="images/dislogo.png" alt=""><a href="about.html" class="disbtn"><i class="fa-solid fa-arrow-right"></i> DISCOVER</a></button>
+        </div>
+        </div>
+
+        <div data-aos="fade-left" class="aboutimg">
+            <img class="ab1" src="images/about1.png" alt="">
+            <img class="ab2" src="images/about2.png" alt="">
+            <img class="ab3" src="images/about3.png" alt="">
+        </div>
+    </div>
+
+    <div class="chef_container">
+        <div class="chef">
+        <img data-aos="fade-right" data-aos-delay="500" class="chefimg" src="images/chef1.jpg" alt="">
+        <img data-aos="fade-right" data-aos-delay="1000" class="chefimg2" src="images/chef2.jpg" alt="">
+        </div>
+
+        <div class="chefttx">
+            <h2 data-aos="fade-up"
+            data-aos-duration="1500" class="chef1">chef</h2>
+            <h2 data-aos="fade-up"
+            data-aos-duration="1500" class="chef2">전형규 셰프</h2>
+            <h2 data-aos="fade-up"
+            data-aos-duration="1500" class="chef3">전형규 셰프가 한국적 시각을 담아<br> 
+                혁신적이고 재치 있게 재해석해 <br>
+                선보이는 정통 이탈리아 퀴진을 만나보세요</h2>
+                <div data-aos="fade-up"
+                data-aos-duration="1500" class="button">
+                    <button class="disbtn"><img class="dis" src="images/dislogo.png" alt=""><a href="example.html" class="disbtn"> <i class="fa-solid fa-arrow-right"></i> DISCOVER</a></button>
+                </div>
+        </div>
+    </div>
+
+    <div class="menu_container">
+        <div class="menu">
+            <div class="menuttx">
+            <h2 data-aos="fade-up"
+            data-aos-duration="1500"  class="menu1">Menu</h2>
+            <h2 data-aos="fade-up"
+            data-aos-duration="1500"  class="menu2">구찌 오스테리아 메뉴</h2>
+            <h2 data-aos="fade-up"
+            data-aos-duration="1500"  class="menu3">이탈리아의 맛과 한국의 매력이 어우러진 <br>
+                제철 테이스팅 메뉴를 경험해보세요.</h2>
+            
+                <div data-aos="fade-up"
+                data-aos-duration="1500"  class="button2">
+                    <button class="disbtn"><img class="dis" src="images/dislogo.png" alt=""><a href="example.html" class="disbtn"> <i class="fa-solid fa-arrow-right"></i> DISCOVER</a></button>
+                </div>
+            </div>
+                <div class="menuimg">
+                    <div class="img_con">
+                    <img class="mimg" src="images/food1.png" alt="">
+                    <div class="img-text">Desserts</div>
+                    <div class="overlay">
+                        <div class="text"> <h2>Desserts</h2> <br>14,000원</div>
+                    </div>
+                    </div>
+
+                    <div class="img_con">
+                        <img class="mimg" src="images/food2_2.png" alt="">
+                        <div class="img-text2">Tasting cource 5</div>
+                        <div class="overlay">
+                            <div class="text"> <h2>Tasting cource 5</h2> <br> 14,000원</div>
+                        </div>
+                        </div>
+
+                        <div class="img_con">
+                            <img class="mimg" src="images/food3_1.png" alt="">
+                            <div class="img-text3">Tasting cource 7</div>
+                            <div class="overlay">
+                                <div class="text"><h2>Tasting cource 7</h2> <br> 14,000원</div>
+                            </div>
+                            </div>
+                </div>
+        </div>
+    </div>
+
+    <div class="reservation_container">
+        <div  class="reservation">
+            <img data-aos="fade-right" data-aos-delay="100" class="resimg" src="images/reservation2.png" alt="">
+            <img data-aos="fade-right" data-aos-delay="200" data-aos-once="faluse" class="resimg2" src="images/reservation3.png" alt="">
+        </div>
+        <div class="resttx">
+            <h2 data-aos="fade-up"
+            data-aos-duration="1500" class="res1">RESERVATION</h2>
+            <h2 data-aos="fade-up"
+            data-aos-duration="1500" class="res2">예약하기</h2>
+                <div data-aos="fade-up"
+                data-aos-duration="1500" class="button3">
+                    <button class="disbtn"><img class="dis" src="images/dislogo.png" alt=""><a href="https://app.catchtable.co.kr/ct/shop/gucci_osteria" class="disbtn"> <i class="fa-solid fa-arrow-right"></i> FIND A TABLE</a></button>
+                </div>
+        </div>
+    </div>
+    <img class="pattern2" src="images/pattern2.png" alt="">
+
+    <div class="footer_container">
+        
+        <div class="footer_up">
+        <div class="footer_wrap">
+        <div class="footer">
+            <h2 class="footerttx">Gucci Osteria</h2>
+            <h1 class="footerttx2">Gucci Gaok, 6F, <br>
+                223, Itaewon-Ro, <br>
+                Yongsan-Gu, <br>Seoul</h1>
+        </div>
+
+        <div class="footer">
+            <h2 class="footerttx">Conact</h2>
+            <h1 class="footerttx2">T. 02-795-1119<br>
+                M. gucciosteria.kr@gucci.com</h1>
+        </div>
+    </div>
+
+    <div class="footer_separator"></div>
+
+    <div class="footer_wrap2">
+        <div class="footer">
+            <h2 class="footerttx">Places</h2>
+            <h1 class="footerttx2">Florence – Italy <br>
+                Beverly Hills – USA <br>
+                Tokyo – Japan <br>
+                Seoul - South Korea</h1>
+        </div>
+
+        <div class="footer">
+            <h2 class="footerttx">Follow us</h2>
+            <h1 class="footerttx2">Instagram <br>
+                Facebook</h1>
+        </div>
+
+        <div class="footer">
+            <h2 class="footerttx">Languages</h2>
+            <h1 class="footerttx2">Korean<br>
+                English</h1>
+        </div>
+    </div>
+</div>
+<div class="footer_down">
+    <div class="line2"></div>
+    <img class="footerimg" src="images/pine-cone.png" alt="">
+    <div class="backimg"></div>
+    <div class="footerdownttx">
+        <h1 class="right">© Gucci Osteria 2023 . All rights reserved.</h1>
+        <h1 class="right">Terms . Accessibility . Privacy & Cookies</h1>
+    </div>
+</div>
+    </div>
+    
+</div>
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+<script>
+    AOS.init();
+</script>
+</body>
+</html>
